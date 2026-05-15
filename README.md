@@ -45,8 +45,8 @@ The Fisheries Laboratory Equipment Reservation System is a laboratory management
 | :--- | :--- |
 | **Requirement** | "Secure login and authentication using FishLERS accounts." |
 | **Test Input / Action** | Enter `tester@email.com` and `password` into the login fields. |
-| **Expected Result** | User is authenticated and redirected to the User Dashboard. |
-| **Actual Result** | System validated credentials and loaded the User landing page. |
+| **Expected Result** | User is authenticated and redirected to the Student Dashboard. |
+| **Actual Result** | System validated credentials and loaded the Student landing page. |
 | **Pass / Fail** | ✅ Pass |
 
 ### REQUIREMENT #2
