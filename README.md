@@ -82,7 +82,7 @@ The Fisheries Laboratory Equipment Reservation System is a laboratory management
 | **Requirement** | "Approve, decline, or modify reservation requests." |
 | **Test Input / Action** | Admin clicks the "Approve" button on a pending request for a Centrifuge. |
 | **Expected Result** | The request status updates to "Approved" and equipment availability is adjusted. |
-| **Actual Result** | Status changed instantly; user received notification of the update. |
+| **Actual Result** | Status changed instantly; approval reflects on User dashboard. |
 | **Pass / Fail** | ✅ Pass |
 
 ### REQUIREMENT #6
