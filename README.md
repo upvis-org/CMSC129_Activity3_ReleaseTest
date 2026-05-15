@@ -175,6 +175,6 @@ The release testing covered 10 core requirements through both direct functional 
 ### iii. Remarks
 * **UI/UX:** Adding a "Help" section or onboarding for first-time users would be beneficial. Additional feedbacks (modals, toast notifications, etc.) are also recommended to improve the user experience. Furthermore, the hero page is well designed but the other pages still needs a lot of improvement.
 
-* **Bugs:** Small bugs can still be found within the app such as the quantity of equipment not yet reflected when equipment gets requested. Both users and admins however are unable to create new chats.
-* 
+* **Bugs:** Small bugs can still be found within the app such as the quantity of equipment not yet reflected when equipment gets requested. Both users and admins however are unable to create new chats. The feature for marking an equipment as functional, damaged, or missing cannot be found or is currently missing.
+   
 * **Security:** The "Exposed Chats" limitation (where all admins see all chats) should be addressed in the next version to improve privacy.
