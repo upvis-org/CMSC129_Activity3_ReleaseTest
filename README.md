@@ -139,36 +139,42 @@ The Fisheries Laboratory Equipment Reservation System is a laboratory management
 
 **Sequence of Actions:**
 
-| Step | Action | Expected Behavior | Result | Remarks (if fail) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 1. Open the app | Log in as `tester@email.com`. | User is authenticated and redirected to the Student Dashboard. | ✅ Pass | |
-| 2. Request Equipment | Navigate to Request Form in the Dashboard and select "Microscope" within the list of available equipment. | Status changed instantly; approval reflects on User dashboard. | ✅ Pass | |
-1.  Log in as `tester@email.com`.
-2.  Navigate to Request Form in the Dashboard and select "Microscope" within the list of available equipment.
-3.  Fill in the reservation form with Tuesday's date, start and return time, name of Adviser/Project Leader, and purpose.
-4.  Submit and check the Dashboard to track the status of the equipment.
-5.  **Observation:** Status is "Pending." After Admin logs in as `rbbuerom@up.edu.ph` and approves, the student status updates to "Approved."
+| Step                                   | Action                                                                                                                | Expected Behavior                                                                                             | Result | Remarks (if fail) |
+| :------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ | :----- | :---------------- |
+| 1. Open the app                        | Log in as `tester@email.com`.                                                                                         | User is authenticated and redirected to the Student Dashboard.                                                | ✅ Pass |                   |
+| 2. Request Equipment                   | Navigate to Request Form in the Dashboard and select "Microscope" within the list of available equipment.             | Status changed instantly; approval reflects on User dashboard.                                                | ✅ Pass |                   |
+| 3. Accomplish request equipment form   | Fill in the reservation form with Tuesday's date, start and return time, name of Adviser/Project Leader, and purpose. | Form accepts valid input and allows the user to proceed with submitting the equipment reservation request.    | ✅ Pass |                   |
+| 4. Track status of requested equipment | Press submit and check the Dashboard to track the status of the equipment.                                            | Submitted request appears in the Dashboard with the current reservation status displayed for user monitoring. | ✅ Pass |                   |
+
+**Observation:** Status is "Pending." After Admin logs in as `rbbuerom@up.edu.ph` and approves, the student status updates to "Approved."
 
 ### Scenario 2: Admin Accountability Audit
 **User Story:** "As a lab admin, I want to mark equipment as returned and export the record so that we have a physical audit trail."
 
 **Sequence of Actions:**
-1.  Log in as `rbbuerom@up.edu.ph`.
-2.  Go to the "Requests" page and find the user's ongoing borrowing record.
-3.  Click "Mark as Returned" and check the condition.
-4.  Go to "Accountability Records" and click "Export to PDF."
-5.  **Observation:** The equipment is back in the available pool, and a PDF file containing the transaction is downloaded.
+
+| Step                               | Action                                                                  | Expected Behavior                                                                                      | Result | Remarks (if fail) |
+| :--------------------------------- | :---------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------- | :----- | :---------------- |
+| 1. Open the app (as admin)         | Log in as `rbbuerom@up.edu.ph`.                                         | Admin user is authenticated and redirected to the Admin Dashboard.                                     | ✅ Pass |                   |
+| 2. Check the record of the user    | Go to the "Requests" page and find the user's ongoing borrowing record. | Ongoing borrowing requests are displayed with complete borrower and equipment details.                 | ✅ Pass |                   |
+| 3. Mark equipment as returned.     | Click "Mark as Returned" and check the condition.                       | Equipment status is updated to returned, and the condition record is saved successfully in the system. | ✅ Pass |                   |
+| 4. Generate report for audit trail | Go to "Accountability Records" and click "Export to PDF."               | System generates and downloads a PDF report containing the accountability and status.                  | ✅ Pass |                   |
+
+**Observation:** The equipment is back in the available pool, and a PDF file containing the transaction is downloaded.
 
 ---
 
 ## E. Summary
 
 ### i. Testing Summary
-The release testing covered 10 core requirements through both direct functional testing and user scenarios. All primary features, including inventory management, digital reservations, and PDF exporting, were verified. Common strengths... Weaknesses... Explain what went wrong, what went right
+The release testing covered 10 core requirements through both direct functional testing and user scenarios. All primary features, including inventory management, digital reservations, and PDF exporting, were verified. All tests for each requirement had lead to a passing result and no complications had been found within testing the app.
 
 ### ii. Conclusion
 **Verdict:** **READY FOR RELEASE** The application fulfills its primary purpose of streamlining laboratory equipment management. The tiered roles prevent unauthorized access to administrative features, and the core workflow (Request -> Approval -> Return) is stable. 
 
 ### iii. Remarks
-* **UI/UX:** The dashboard is decent but it needs more update in the design since the theme and the color palette are different in other sections or pages in the application. Adding a "Help" section or onboarding for first-time users would be beneficial. Furthermore, the hero page is well designed but the other pages still needs a lot of improvement.
+* **UI/UX:** Adding a "Help" section or onboarding for first-time users would be beneficial. Additional feedbacks (modals, toast notifications, etc.) are also recommended to improve the user experience. Furthermore, the hero page is well designed but the other pages still needs a lot of improvement.
+
+* **Bugs:** Small bugs can still be found within the app such as the quantity of equipment not yet reflected when equipment gets requested.
+
 * **Security:** The "Exposed Chats" limitation (where all admins see all chats) should be addressed in the next version to improve privacy.
