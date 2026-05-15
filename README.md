@@ -127,7 +127,7 @@ The Fisheries Laboratory Equipment Reservation System is a laboratory management
 | **Requirement** | "Integrated chat system for communication between users and administrators." |
 | **Test Input / Action** | User sends a message to Admin via the integrated chat bubble. |
 | **Expected Result** | The message is received and viewable by the Admin user. |
-| **Actual Result** | Message was delivered, but visible to all admin tiers (known limitation). |
+| **Actual Result** | Message was delivered is delivered and viewable by Admin. Both users and admins however are unable to create new chats|
 | **Pass / Fail** | ✅ Pass |enario-Based Testing
 
 ---
