@@ -88,10 +88,10 @@ The Fisheries Laboratory Equipment Reservation System is a laboratory management
 ### REQUIREMENT #6
 | Field | Description |
 | :--- | :--- |
-| **Requirement** | "Record borrowed equipment start and return dates." |
-| **Test Input / Action** | Admin sets the "Returned Date" field when a user brings back equipment. |
-| **Expected Result** | The system logs the timestamp and updates the record history. |
-| **Actual Result** | The return date was successfully recorded in the accountability log. |
+| **Requirement** | "Resolve missing or damaged equipment." |
+| **Test Input / Action** | Admin marks mising "Chlorine Test Kit" as resolved. |
+| **Expected Result** | The system updates the equipment status to resolved. |
+| **Actual Result** | The equipment record was successfully updated, and the resolution date was recorded in the accountability log. |
 | **Pass / Fail** | ✅ Pass |
 
 ### REQUIREMENT #7
@@ -149,16 +149,16 @@ The Fisheries Laboratory Equipment Reservation System is a laboratory management
 **Observation:** Status is "Pending." After Admin logs in as `rbbuerom@up.edu.ph` and approves, the student status updates to "Approved."
 
 ### Scenario 2: Admin Accountability Audit
-**User Story:** "As a lab admin, I want to mark equipment as returned and export the record so that we have a physical audit trail."
+**User Story:** "As a lab admin, I want to approve some pending requests and export the record for certain accountabilities."
 
 **Sequence of Actions:**
 
-| Step                               | Action                                                                  | Expected Behavior                                                                                      | Result | Remarks (if fail) |
-| :--------------------------------- | :---------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------- | :----- | :---------------- |
-| 1. Open the app (as admin)         | Log in as `rbbuerom@up.edu.ph`.                                         | Admin user is authenticated and redirected to the Admin Dashboard.                                     | ✅ Pass |                   |
-| 2. Check the record of the user    | Go to the "Requests" page and find the user's ongoing borrowing record. | Ongoing borrowing requests are displayed with complete borrower and equipment details.                 | ✅ Pass |                   |
-| 3. Mark equipment as returned.     | Click "Mark as Returned" and check the condition.                       | Equipment status is updated to returned, and the condition record is saved successfully in the system. | ✅ Pass |                   |
-| 4. Generate report for audit trail | Go to "Accountability Records" and click "Export to PDF."               | System generates and downloads a PDF report containing the accountability and status.                  | ✅ Pass |                   |
+| Step                                  | Action                                                              | Expected Behavior                                                                                                   | Result | Remarks (if fail) |
+| :------------------------------------ | :------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------ | :----- | :---------------- |
+| 1. Open the app (as admin)            | Log in as `rbbuerom@up.edu.ph`.                                     | Admin user is authenticated and redirected to the Admin Dashboard.                                                  | ✅ Pass |                   |
+| 2. Check pending requests             | Look at the dashboard, click on one pending request, and press view | Ongoing borrowing requests are displayed with complete borrower and equipment details.                              | ✅ Pass |                   |
+| 3. Determine that request can be made | Click on "Approve" after checking all necessary information         | Selected borrowing request is approved successfully, and the equipment status is updated accordingly in the system. | ✅ Pass |                   |
+| 4. Generate accountability report     | Go to "Accountability" and click "Export to PDF."                   | System generates and downloads a PDF report containing the accountability and status.                               | ✅ Pass |                   |
 
 **Observation:** The equipment is back in the available pool, and a PDF file containing the transaction is downloaded.
 
