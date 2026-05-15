@@ -138,10 +138,15 @@ The Fisheries Laboratory Equipment Reservation System is a laboratory management
 **User Story:** "As a student researcher, I want to reserve a microscope online so that I can ensure the tool is available for my experiment on Tuesday."
 
 **Sequence of Actions:**
+
+| Step | Action | Expected Behavior | Result | Remarks (if fail) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1. Open the app | Log in as `tester@email.com`. | User is authenticated and redirected to the Student Dashboard. | ✅ Pass | |
+| 2. Request Equipment | Navigate to Request Form in the Dashboard and select "Microscope" within the list of available equipment. | Status changed instantly; approval reflects on User dashboard. | ✅ Pass | |
 1.  Log in as `tester@email.com`.
-2.  Navigate to the Equipment list and select "Microscope."
-3.  Fill in the reservation form with Tuesday's date.
-4.  Submit and check "Track Status."
+2.  Navigate to Request Form in the Dashboard and select "Microscope" within the list of available equipment.
+3.  Fill in the reservation form with Tuesday's date, start and return time, name of Adviser/Project Leader, and purpose.
+4.  Submit and check the Dashboard to track the status of the equipment.
 5.  **Observation:** Status is "Pending." After Admin logs in as `rbbuerom@up.edu.ph` and approves, the student status updates to "Approved."
 
 ### Scenario 2: Admin Accountability Audit
