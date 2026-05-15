@@ -125,9 +125,9 @@ The Fisheries Laboratory Equipment Reservation System is a laboratory management
 | Field | Description |
 | :--- | :--- |
 | **Requirement** | "Integrated chat system for communication between users and administrators." |
-| **Test Input / Action** | User sends a message to Admin via the integrated chat bubble. |
+| **Test Input / Action** | Student sends a message to Admin via the integrated chat bubble and vice versa. |
 | **Expected Result** | The message is received and viewable by the Admin user. |
-| **Actual Result** | Message was delivered is delivered and viewable by Admin. Both users and admins however are unable to create new chats|
+| **Actual Result** | Messages sent by student is delivered and viewable by admin. Messages sent by admin is delivered and viewable by student.|
 | **Pass / Fail** | ✅ Pass |enario-Based Testing
 
 ---
@@ -175,6 +175,6 @@ The release testing covered 10 core requirements through both direct functional 
 ### iii. Remarks
 * **UI/UX:** Adding a "Help" section or onboarding for first-time users would be beneficial. Additional feedbacks (modals, toast notifications, etc.) are also recommended to improve the user experience. Furthermore, the hero page is well designed but the other pages still needs a lot of improvement.
 
-* **Bugs:** Small bugs can still be found within the app such as the quantity of equipment not yet reflected when equipment gets requested.
-
+* **Bugs:** Small bugs can still be found within the app such as the quantity of equipment not yet reflected when equipment gets requested. Both users and admins however are unable to create new chats.
+* 
 * **Security:** The "Exposed Chats" limitation (where all admins see all chats) should be addressed in the next version to improve privacy.
